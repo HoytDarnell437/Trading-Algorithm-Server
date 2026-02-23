@@ -42,7 +42,7 @@ def test_trend():
         # calculate macd
         action = macd(price, macdSensitivity)
 
-        action = f20050(price)
+        action = goldenCross(price)
 
         # send action to trade function
         if i > 30 and action != 0:
@@ -61,5 +61,5 @@ def test_trend():
     ax.plot(x, prices)
     plt.show()
 
-if __name__ == "__main__":
+while __name__ == "__main__":
     test_trend()
