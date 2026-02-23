@@ -17,6 +17,9 @@ def aroon(price: float, period: int = 25)->int:
     if len(priceList) < period:
         aroonList.append(0)
         return 0
+    
+    if len(priceList) > period:
+        priceList.pop()
 
     highIndex = 1 + priceList.index(max(priceList[:period]))
     lowIndex = 1 + priceList.index(min(priceList[:period]))
